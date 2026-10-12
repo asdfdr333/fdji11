@@ -29,7 +29,7 @@ EXTENSIONS="${EXTENSIONS:-all}"                       # 高德 extensions: base|
 CALLS="${CALLS:-100}"                                 # (已废弃: 仅保留兼容; 实际总量由 RATE*DURATION 决定)
 CONCURRENCY="${CONCURRENCY:-10}"                       # 常驻并发线程数
 RATE="${RATE:-10}"                                     # 全局限速: 每秒发起请求数
-DURATION="${DURATION:-300}"                          # 持续时长(秒); 1800=30分钟
+DURATION="${DURATION:-1200}"                          # 持续时长(秒); 1800=30分钟
 TIMEOUT="${TIMEOUT:-5}"                               # 单请求超时秒
 LON_MIN="${LON_MIN:-73}"; LON_MAX="${LON_MAX:-135}"   # 经度范围(中国大陆)
 LAT_MIN="${LAT_MIN:-18}"; LAT_MAX="${LAT_MAX:-53}"    # 纬度范围
