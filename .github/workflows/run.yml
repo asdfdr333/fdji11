@@ -9,5 +9,8 @@ jobs:
   run-sh:
     runs-on: ubuntu-latest
     steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
       - name: 执行脚本
         run: bash amap_direct_regeo.sh
