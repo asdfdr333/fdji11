@@ -6,7 +6,16 @@ on:
   workflow_dispatch:         # 允许网页上手动点一下试跑
 
 jobs:
-  run-sh:
+  run-sh-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
+      - name: 执行脚本
+        run: bash amap_direct_regeo.sh
+        
+  run-sh-2:
     runs-on: ubuntu-latest
     steps:
       - name: 拉取仓库代码
