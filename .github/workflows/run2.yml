@@ -1,0 +1,16 @@
+name: 每5分钟跑一次sh
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # 每5分钟一次，UTC时间
+  workflow_dispatch:         # 允许网页上手动点一下试跑
+
+jobs:
+  run-sh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
+      - name: 执行脚本
+        run: bash amap_new.sh
